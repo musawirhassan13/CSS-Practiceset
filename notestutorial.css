@@ -1,0 +1,339 @@
+/* =====================================================
+   CSS TUTORIAL NOTES
+   Complete Step-by-Step Guide with Examples
+===================================================== */
+
+/* =====================================================
+   1. CSS BASICS
+===================================================== */
+
+/* Single line comment */
+/* Multi-line comment example
+   This is how you comment multiple lines
+*/
+
+/* Selector examples */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    color: #0077cc;
+    font-size: 32px;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* =====================================================
+   2. COLORS & FONTS
+===================================================== */
+.color-name {
+    color: red;
+}
+
+.color-hex {
+    color: #3498db;
+}
+
+.color-rgb {
+    color: rgb(0, 150, 100);
+}
+
+.font-style {
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* =====================================================
+   3. BOX MODEL
+===================================================== */
+.box {
+    width: 300px;
+    height: 150px;
+    padding: 20px; /* Inner spacing */
+    margin: 20px; /* Outer spacing */
+    border: 3px solid #0077cc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-sizing: border-box; /* Includes padding/border in width */
+}
+
+/* =====================================================
+   4. DISPLAY & VISIBILITY
+===================================================== */
+.block {
+    display: block;
+    background-color: #eee;
+}
+
+.inline {
+    display: inline;
+    background-color: #cceeff;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+    background-color: #aaffaa;
+}
+
+/* =====================================================
+   5. POSITIONING
+===================================================== */
+.relative {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    background-color: #ffccaa;
+}
+
+.absolute-container {
+    position: relative;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+
+.absolute {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6666;
+    padding: 10px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #111;
+    color: white;
+    padding: 10px;
+}
+
+/* =====================================================
+   6. FLEXBOX
+===================================================== */
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* horizontal alignment */
+    align-items: center; /* vertical alignment */
+    gap: 10px;
+    background-color: #ddd;
+    padding: 20px;
+}
+
+.flex-item {
+    background-color: teal;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* =====================================================
+   7. GRID
+===================================================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* =====================================================
+   8. PSEUDO-CLASSES & ELEMENTS
+===================================================== */
+a:hover {
+    color: red;
+}
+
+input:focus {
+    border: 2px solid blue;
+}
+
+li:first-child {
+    color: green;
+}
+
+li:last-child {
+    color: red;
+}
+
+p::first-letter {
+    font-size: 30px;
+    color: darkblue;
+}
+
+p::after {
+    content: " ✔";
+}
+
+/* =====================================================
+   9. BACKGROUNDS & GRADIENTS
+===================================================== */
+.bg-color {
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.bg-image {
+    background-image: url("https://via.placeholder.com/400");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+}
+
+.bg-gradient-linear {
+    background: linear-gradient(90deg, #0077cc, #00d4ff);
+}
+
+.bg-gradient-radial {
+    background: radial-gradient(circle, #ffcc00, #ff6600);
+}
+
+/* =====================================================
+   10. TRANSITIONS & TRANSFORMS
+===================================================== */
+.transition-box {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    transition: transform 0.5s, background 0.5s;
+}
+
+.transition-box:hover {
+    transform: scale(1.2) rotate(10deg);
+    background-color: darkred;
+}
+
+.transform-box {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+    transform: rotate(15deg) translateX(20px);
+}
+
+/* =====================================================
+   11. ANIMATIONS
+===================================================== */
+@keyframes moveBox {
+    0% { transform: translateX(0); background-color: #0077cc; }
+    50% { transform: translateX(200px); background-color: #00d4ff; }
+    100% { transform: translateX(0); background-color: #0077cc; }
+}
+
+.animation-box {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 20px auto;
+    border-radius: 10px;
+    animation: moveBox 3s infinite;
+}
+
+/* =====================================================
+   12. OVERFLOW
+===================================================== */
+.overflow-box {
+    width: 200px;
+    height: 50px;
+    overflow: auto;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+/* =====================================================
+   13. MEDIA QUERIES & RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 768px) {
+    body {
+        background-color: lightyellow;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+/* =====================================================
+   14. ADVANCED CSS
+===================================================== */
+
+/* CSS Variables */
+:root {
+    --primary-color: #0077cc;
+    --secondary-color: #ff6600;
+    --text-color: #333;
+}
+
+/* Using variables */
+.variable-example {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Object-fit Example */
+.img-fit {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Shadows */
+.shadow-box {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Clamp Example */
+.clamp-text {
+    font-size: clamp(14px, 2vw, 24px);
+}
+
+/* Z-index Example */
+.z-index-demo {
+    position: relative;
+    z-index: 10;
+}
+
+/* =====================================================
+   15. FINAL NOTES
+===================================================== */
+/*
+This file contains almost all CSS concepts:
+- Selectors, Colors, Fonts
+- Box Model
+- Display & Position
+- Flexbox & Grid
+- Pseudo-classes/elements
+- Backgrounds & Gradients
+- Transitions, Transforms
+- Animations
+- Overflow
+- Media Queries / Responsive
+- Advanced: Variables, clamp(), object-fit, shadows, z-index
+*/
